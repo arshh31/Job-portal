@@ -1,4 +1,4 @@
-# 💼 Jobby App – Job Search Platform
+# 💼 Job Search Platform
 
 A fully functional **Job Search Web Application** built using **React.js**, inspired by popular job portals.  
 The app includes **authentication, protected routes, job listings, filters, job details pages**, and real API integration.
