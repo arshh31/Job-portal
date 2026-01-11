@@ -30,7 +30,7 @@ const Jobcard = props => {
           <div className="nameandratingContainer">
             <h1 className="jobTitle">{title}</h1>
             <div className="jobRatings">
-              <IoIosStar size={24} color={'#fbbf24'} />
+              <IoIosStar size={24} color="#fbbf24" />
               <p className="jobRating"> {rating}</p>
             </div>
           </div>
@@ -38,12 +38,12 @@ const Jobcard = props => {
         <div className="addressContainer">
           <div className="detailsContainer">
             <div className="locationContainer">
-              <MdLocationOn size={24} color={'#f1f5f9'} />
+              <MdLocationOn size={24} color="#f1f5f9" />
               <p className="location"> {location}</p>
             </div>
 
             <div className="shoppingContainer">
-              <FaShoppingBag size={24} color={'#f1f5f9'} />
+              <FaShoppingBag size={24} color="#f1f5f9" />
               <p className="location"> {employmentType}</p>
             </div>
           </div>

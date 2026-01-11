@@ -5,8 +5,14 @@ import './index.css'
 
 const Similarjobs = props => {
   const {jobs} = props
-  const {companyLogo, title, location, rating, employmentType, jobDescription} =
-    jobs
+  const {
+    companyLogo,
+    title,
+    location,
+    rating,
+    employmentType,
+    jobDescription,
+  } = jobs
   return (
     <div className="similarJob-Container">
       <div className="companyContainer">
@@ -20,7 +26,7 @@ const Similarjobs = props => {
         <div className="titleAndRating-container">
           <h1 className="jobTitle-similar">{title}</h1>
           <div className="ratingContainer">
-            <IoIosStar size={24} color={'#fbbf24'} />
+            <IoIosStar size={24} color="#fbbf24" />
             <p className="ratingSimilar">{rating}</p>
           </div>
         </div>
@@ -29,12 +35,12 @@ const Similarjobs = props => {
       <p className="description-Similar">{jobDescription}</p>
       <div className="detailsContainer">
         <div className="locationContainer">
-          <MdLocationOn size={24} color={'#f1f5f9'} />
+          <MdLocationOn size={24} color="#f1f5f9" />
           <p className="location"> {location}</p>
         </div>
 
         <div className="shoppingContainer">
-          <FaShoppingBag size={24} color={'#f1f5f9'} />
+          <FaShoppingBag size={24} color="#f1f5f9" />
           <p className="location"> {employmentType}</p>
         </div>
       </div>

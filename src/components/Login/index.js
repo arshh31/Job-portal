@@ -42,6 +42,7 @@ class Login extends Component {
       this.onSubmitFailure(data.error_msg)
     }
   }
+
   render() {
     const {username, password, showErrorMsg, errorMsg} = this.state
     return (

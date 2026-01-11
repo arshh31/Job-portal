@@ -105,13 +105,13 @@
   }
 
   .lifeCompanyContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.companyDescription {
-  color: white;
-  font-size: 20px;
-  flex-wrap: wrap;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .companyDescription {
+    color: white;
+    font-size: 20px;
+    flex-wrap: wrap;
+  }
 }
