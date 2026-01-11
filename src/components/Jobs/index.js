@@ -26,13 +26,13 @@ class Jobs extends Component {
     jobsList: [],
   }
 
-  onChangeSearchInput = event => {
-    this.setState({searchInput: event.target.value})
-  }
-
   componentDidMount() {
     this.onSearchProfile()
     this.getJobs()
+  }
+
+  onChangeSearchInput = event => {
+    this.setState({searchInput: event.target.value})
   }
 
   updateEmploymentTypesChecked = typeId => {
@@ -55,8 +55,11 @@ class Jobs extends Component {
   getJobs = async () => {
     this.setState({jobApiStatus: apiStatusContent.inProgress})
 
-    const {activeSalaryRangeId, employmentTypesChecked, searchInput} =
-      this.state
+    const {
+      activeSalaryRangeId,
+      employmentTypesChecked,
+      searchInput,
+    } = this.state
     const employTypes = employmentTypesChecked.join()
     const jwtToken = Cookies.get('jwt_token')
     const apiUrl = `https://apis.ccbp.in/jobs?employment_type=${employTypes}&minimum_package=${activeSalaryRangeId}&search=${searchInput}`
@@ -124,7 +127,6 @@ class Jobs extends Component {
       userProfileData,
       activeSalaryRangeId,
       employmentTypesChecked,
-      profileApiStatus,
     } = this.state
     const {name, bio, imgUrl} = userProfileData
     return (
@@ -145,7 +147,7 @@ class Jobs extends Component {
     )
   }
 
-  renderSearchBar = searchBarId => {
+  renderSearchBar = () => {
     const {searchInput} = this.state
     return (
       <div className="jobsListContainer">
@@ -163,47 +165,43 @@ class Jobs extends Component {
             data-testid="searchButton"
             onClick={() => this.getJobs()}
           >
-            <BsSearch color={'#f1f5f9'} />
+            <BsSearch color="#f1f5f9" />
           </button>
         </div>
       </div>
     )
   }
 
-  renderNoJobsView = () => {
-    return (
-      <div className="noJobsContainer">
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/no-jobs-img.png"
-          alt="no jobs"
-        />
-        <h1>No Jobs Found</h1>
-        <p>We could not find any jobs. Try other filters</p>
-      </div>
-    )
-  }
+  renderNoJobsView = () => (
+    <div className="noJobsContainer">
+      <img
+        src="https://assets.ccbp.in/frontend/react-js/no-jobs-img.png"
+        alt="no jobs"
+      />
+      <h1>No Jobs Found</h1>
+      <p>We could not find any jobs. Try other filters</p>
+    </div>
+  )
 
-  renderJobLoader = () => {
-    return (
-      <div className="loader-container" data-testid="loader">
-        <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
-      </div>
-    )
-  }
+  renderJobLoader = () => (
+    <div className="loader-container" data-testid="loader">
+      <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
+    </div>
+  )
 
-  renderJobFailureView = () => {
-    return (
-      <div>
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
-          alt="failure view"
-        />
-        <h1>Oops! Something Went Wrong</h1>
-        <p>We cannot seem to find the page you are looking for.</p>
-        <button onClick={() => this.getJobs()}>Retry</button>
-      </div>
-    )
-  }
+  renderJobFailureView = () => (
+    <div>
+      <img
+        src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
+        alt="failure view"
+      />
+      <h1>Oops! Something Went Wrong</h1>
+      <p>We cannot seem to find the page you are looking for.</p>
+      <button type="button" onClick={() => this.getJobs()}>
+        Retry
+      </button>
+    </div>
+  )
 
   renderJobsList = () => {
     const {jobsList} = this.state
@@ -237,21 +235,17 @@ class Jobs extends Component {
     }
   }
 
-  renderProfileFailureContainer = () => {
-    return (
-      <div>
-        <button>Retry</button>
-      </div>
-    )
-  }
+  renderProfileFailureContainer = () => (
+    <div>
+      <button type="button">Retry</button>
+    </div>
+  )
 
-  renderProfileLoaderView = () => {
-    return (
-      <div className="loader-container" data-testid="loader">
-        <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
-      </div>
-    )
-  }
+  renderProfileLoaderView = () => (
+    <div className="loader-container" data-testid="loader">
+      <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
+    </div>
+  )
 
   renderProfileContainers = () => {
     const {profileApiStatus} = this.state

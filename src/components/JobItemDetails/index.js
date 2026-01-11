@@ -27,21 +27,21 @@ class JobItemDetails extends Component {
     this.getJobItemFullDetails()
   }
 
-  formattedJobDetails = job_details => ({
-    companyLogo: job_details.company_logo_url,
-    companyWebsite: job_details.company_website_url,
-    title: job_details.title,
-    employmentType: job_details.employment_type,
-    id: job_details.id,
-    jobDescription: job_details.job_description,
-    location: job_details.location,
-    salary: job_details.package_per_annum,
-    rating: job_details.rating,
+  formattedJobDetails = jobDetails => ({
+    companyLogo: jobDetails.company_logo_url,
+    companyWebsite: jobDetails.company_website_url,
+    title: jobDetails.title,
+    employmentType: jobDetails.employment_type,
+    id: jobDetails.id,
+    jobDescription: jobDetails.job_description,
+    location: jobDetails.location,
+    salary: jobDetails.package_per_annum,
+    rating: jobDetails.rating,
     lifeAtCompany: {
-      description: job_details.life_at_company.description,
-      imageUrl: job_details.life_at_company.image_url,
+      description: jobDetails.life_at_company.description,
+      imageUrl: jobDetails.life_at_company.image_url,
     },
-    skills: job_details.skills.map(eachItem => ({
+    skills: jobDetails.skills.map(eachItem => ({
       name: eachItem.name,
       imageUrl: eachItem.image_url,
     })),
@@ -105,7 +105,6 @@ class JobItemDetails extends Component {
       salary,
       companyWebsite,
       employmentType,
-      id,
       jobDescription,
       location,
       rating,
@@ -127,7 +126,7 @@ class JobItemDetails extends Component {
           <div className="nameandratinginJobContainer">
             <h1 className="jobTitle">{title}</h1>
             <div className="jobRatings">
-              <IoIosStar size={24} color={'#fbbf24'} />
+              <IoIosStar size={24} color="#fbbf24" />
               <p className="jobRating"> {rating}</p>
             </div>
           </div>
@@ -135,12 +134,12 @@ class JobItemDetails extends Component {
         <div className="addressContainer">
           <div className="detailsContainer">
             <div className="locationContainer">
-              <MdLocationOn size={24} color={'#f1f5f9'} />
+              <MdLocationOn size={24} color="#f1f5f9" />
               <p className="location"> {location}</p>
             </div>
 
             <div className="shoppingContainer">
-              <FaShoppingBag size={24} color={'#f1f5f9'} />
+              <FaShoppingBag size={24} color="#f1f5f9" />
               <p className="location"> {employmentType}</p>
             </div>
           </div>
@@ -191,37 +190,31 @@ class JobItemDetails extends Component {
     )
   }
 
-  renderWholeContainers = () => {
-    return (
-      <div className="jobItemDetails-Container">
-        <Header />
-        <div className="containers">{this.renderCompanyDetails()}</div>
-        <div className="containers2">{this.renderSimilarJob()}</div>
-      </div>
-    )
-  }
+  renderWholeContainers = () => (
+    <div className="jobItemDetails-Container">
+      <Header />
+      <div className="containers">{this.renderCompanyDetails()}</div>
+      <div className="containers2">{this.renderSimilarJob()}</div>
+    </div>
+  )
 
-  renderLoaderView = () => {
-    return (
-      <div className="loader-container" data-testid="loader">
-        <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
-      </div>
-    )
-  }
+  renderLoaderView = () => (
+    <div className="loader-container" data-testid="loader">
+      <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
+    </div>
+  )
 
-  renderFailedContent = () => {
-    return (
-      <div>
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
-          alt="failure view"
-        />
-        <h1>Oops! Something Went Wrong</h1>
-        <p>We cannot seem to find the page you are looking for</p>
-        <button>Retry</button>
-      </div>
-    )
-  }
+  renderFailedContent = () => (
+    <div>
+      <img
+        src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
+        alt="failure view"
+      />
+      <h1>Oops! Something Went Wrong</h1>
+      <p>We cannot seem to find the page you are looking for</p>
+      <button type="button">Retry</button>
+    </div>
+  )
 
   renderFinalContainer = () => {
     const {apiStatus} = this.state

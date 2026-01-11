@@ -106,3 +106,15 @@
   display: flex;
   flex-direction: column;
 }
+
+@media (max-width: 576px) {
+  .jobDetailsContainer {
+    background-color: #272727;
+    margin: 15px;
+    width: 60vw;
+    max-height: 65vh;
+    border-radius: 6px;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+}

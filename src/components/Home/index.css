@@ -2,6 +2,8 @@
   background-color: #121212;
   height: 100vh;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .jobDescriptionContainer {
@@ -9,12 +11,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-}
-
-.homeImage {
-  width: 70vw;
-  height: 70vh;
-  align-self: flex-end;
 }
 
 .jobButton {
@@ -30,4 +26,36 @@
 .whole-cont {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 576px) {
+  .homeImage-large {
+    display: none;
+    align-self: flex-end;
+  }
+
+  .whole-cont {
+    padding: 20px;
+  }
+
+  .homeContainer {
+    overflow-y: scroll;
+  }
+}
+
+@media (min-width: 577px) {
+  .homeImage-small {
+    display: none;
+  }
+
+  .homeImage-large {
+    align-self: flex-end;
+    width: 100vw;
+  }
+
+  .homeContainer {
+    background-color: #121212;
+    height: 100vh;
+    color: white;
+  }
 }

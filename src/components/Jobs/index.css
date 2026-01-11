@@ -1,6 +1,7 @@
 .jobsContainer {
   background-color: #121212;
   height: 100vh;
+  width: 100vw;
   overflow-y: scroll;
 }
 
@@ -98,9 +99,117 @@
   width: 18vw;
 }
 
-.noJobsContainer{
+.noJobsContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 576px) {
+  .jobs-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profileContainerContents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    padding: 20px;
+  }
+
+  .profileContent {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+    background-size: cover;
+    border-radius: 15px;
+    height: 30vh;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .horizontaLine4 {
+    width: 78vw;
+  }
+
+  .jobsListContainer {
+    margin: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .searchElements {
+    width: 50vw;
+    height: 3vh;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin-left: 50px;
+  }
+
+  .inputSearchElement {
+    width: 42vw;
+    background-color: transparent;
+    border-width: 0px;
+    padding: 5px;
+    color: white;
+  }
+}
+
+@media (min-width: 576px) {
+  .profileContent {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+    background-size: cover;
+    border-radius: 15px;
+    height: 30vh;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .profileContainerContents {
+    display: flex;
+    flex-direction: column;
+    width: 33vw;
+    padding: 20px;
+  }
+
+  .horizontaLine4 {
+    width: 35vw;
+  }
+
+  .unOrder-jobsList {
+    width: 67vw;
+    padding: 30px;
+  }
+
+  .searchElements {
+    width: 30vw;
+    height: 3vh;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin-left: 50px;
+  }
+
+  .inputSearchElement {
+    width: 22vw;
+    background-color: transparent;
+    border-width: 0px;
+    padding: 5px;
+    color: white;
+  }
 }

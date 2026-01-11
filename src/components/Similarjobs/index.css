@@ -54,6 +54,7 @@
 
 @media (max-width: 576px) {
   .similarJob-Container {
-    max-width: 80vw;
+    width: 70vw;
+    height:50vh;
   }
 }

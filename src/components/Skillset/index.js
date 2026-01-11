@@ -6,7 +6,7 @@ const Skillset = props => {
   return (
     <div className="skillsContainer">
       <div className="skillsContent">
-        <img src={imageUrl} className="skillsImages" alt={name}/>
+        <img src={imageUrl} className="skillsImages" alt={name} />
         <p className="skillName">{name}</p>
       </div>
     </div>

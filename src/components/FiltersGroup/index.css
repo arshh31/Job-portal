@@ -17,7 +17,6 @@
   font-size: 16px;
 }
 
-
 .employeeTitle {
   font-family: 'Roboto';
   color: white;
@@ -31,4 +30,16 @@
   color: white;
   font-family: 'Roboto';
   margin-left: 0px;
+}
+
+@media (max-width: 576px) {
+  .horizontalLine5 {
+    width: 68vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .horizontalLine5 {
+    width: 35vw;
+  }
 }

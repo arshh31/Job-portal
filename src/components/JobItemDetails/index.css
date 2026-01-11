@@ -101,6 +101,17 @@
   .similarJobsContainer {
     display: flex;
     flex-direction: column;
-    max-width: 100vw;
+    width: 50vw;
   }
+
+  .lifeCompanyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.companyDescription {
+  color: white;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
 }

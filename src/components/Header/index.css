@@ -36,3 +36,18 @@
   font-weight: 400;
   font-family: 'Roboto';
 }
+
+@media (max-width: 576px) {
+  .listItems {
+    display: none;
+  }
+  .logout-desktop-btn {
+    display: none;
+  }
+}
+
+@media (min-width: 577px) {
+  .logo-icons {
+    display: none;
+  }
+}
