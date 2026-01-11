@@ -1,11 +1,11 @@
-#  Job Search Platform
+# 💼 Jobby App – Job Search Platform
 
 A fully functional **Job Search Web Application** built using **React.js**, inspired by popular job portals.  
 The app includes **authentication, protected routes, job listings, filters, job details pages**, and real API integration.
 
 ---
 
-##  Demo
+## 🎥 Demo
 
 ### Success View
 <div style="text-align:center;">
@@ -23,7 +23,7 @@ The app includes **authentication, protected routes, job listings, filters, job 
 
 ---
 
-##  Features
+## 🚀 Features
 
 - Secure **Login Authentication** using JWT
 - **Protected Routes** (Home, Jobs, Job Details)
@@ -38,7 +38,7 @@ The app includes **authentication, protected routes, job listings, filters, job 
 
 ---
 
-##  Tech Stack
+## 🛠️ Tech Stack
 
 - **React.js** (Class Components)
 - **React Router**
@@ -50,7 +50,7 @@ The app includes **authentication, protected routes, job listings, filters, job 
 
 ---
 
-##  Test Credentials
+## 🔐 Test Credentials
 
 ```text
 Username: rahul
