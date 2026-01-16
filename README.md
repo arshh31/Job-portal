@@ -5,7 +5,7 @@ The app includes **authentication, protected routes, job listings, filters, job 
 
 ---
 
-## 🎥 Demo
+##  Demo
 
 ### Success View
 <div style="text-align:center;">
