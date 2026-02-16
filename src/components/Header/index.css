@@ -1,12 +1,10 @@
 .nav-header {
   background-color: #272727;
   height: 10vh;
-}
-
-.nav-content {
-  padding: 20px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav-menu {
@@ -43,6 +41,10 @@
   }
   .logout-desktop-btn {
     display: none;
+  }
+  .nav-items{
+    display: flex;
+    align-self: flex-end;
   }
 }
 

@@ -13,7 +13,7 @@ const Header = props => {
   }
   return (
     <nav className="nav-header">
-      <div className="nav-content">
+      <div>
         <Link to="/">
           <img
             className="website-logo"
@@ -21,6 +21,9 @@ const Header = props => {
             alt="website logo"
           />
         </Link>
+      </div>
+
+      <div className="nav-items">
         <ul className="nav-menu">
           <Link to="/" className="nav-link">
             <li className="listItems">Home</li>
@@ -30,22 +33,23 @@ const Header = props => {
             <li className="listItems">Jobs</li>
             <FaShoppingBag className="logo-icons" size={24} color="#f1f5f9" />
           </Link>
-          <li>
-            <button
-              type="button"
-              className="logout-desktop-btn"
-              onClick={onClickLogout}
-            >
-              Logout
-            </button>
-            <IoIosLogOut
-              className="logo-icons"
-              size={26}
-              color="#f1f5f9"
-              onClick={onClickLogout}
-            />
-          </li>
         </ul>
+      </div>
+
+      <div>
+        <button
+          type="button"
+          className="logout-desktop-btn"
+          onClick={onClickLogout}
+        >
+          Logout
+        </button>
+        <IoIosLogOut
+          className="logo-icons"
+          size={26}
+          color="#f1f5f9"
+          onClick={onClickLogout}
+        />
       </div>
     </nav>
   )

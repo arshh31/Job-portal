@@ -136,7 +136,6 @@ class Jobs extends Component {
           <h1 className="name-heading">{name}</h1>
           <p className="profile-description">{bio} </p>
         </div>
-        <hr className="horizontaLine4" />
         <FiltersGroup
           updateSalaryRangeId={this.updateSalaryRangeId}
           activeSalaryRangeId={activeSalaryRangeId}

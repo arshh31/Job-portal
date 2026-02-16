@@ -94,6 +94,7 @@ const FiltersGroup = props => {
 
   return (
     <div>
+      <hr className="horizontalLine5" />
       {renderEmploymentTypes()}
       <hr className="horizontalLine5" />
       {renderSalaryRange()}
